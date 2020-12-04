@@ -1,0 +1,350 @@
+*{
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+body, html {
+    height: 100%;
+    background-color: #FFF6F2;
+    /* background-color: blue; */
+    
+  }
+
+h1{
+    font-family: 'Days One', sans-serif;
+    color: #50514F;
+    font-weight: bold;
+}
+
+h4{
+    font-family: 'Quicksand', sans-serif;
+    color: #50514F;
+    font-weight: 500; 
+}
+p{
+    font-family: 'Quicksand', sans-serif;
+    color: #50514F;
+    font-weight: regular;
+}
+
+.welcome {
+    background-image: url('/Assets/Images/Colorful-Geometric-Background.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    /* height: 500px; */
+    object-fit: fill;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.welcome .name h1{
+    text-align: center;
+    font-size: 80px;
+    padding: 20px;
+    color: #FFF6F2;
+}
+
+.aboutMe, .myProjects, .contact{
+    /* background-color: #FDD1CE; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    display: flex;
+    width:90vw;
+    /* background-color: blue; */
+    justify-content: space-between;
+    align-content: center;
+    margin-left: 10vh;
+    margin-top: 10vh;
+}
+.aboutMe .myphoto{
+    /* height: 500px;
+    width: 700px; */
+    /* height: 100px; */
+    width: 50%;
+    
+}
+.aboutMe .photo{
+    /* height: 50%; */
+    width: 70%;
+    object-fit: contain;
+    border: 5px solid #AC057F;
+
+}
+
+.descriptionMe{
+    width:50%;
+
+}
+
+.title h1{
+    color: #AC057F;
+}
+
+/*Prueba de Galeria de Proyectos*/
+
+.Grid{
+    width: 50rem;
+    margin: 5rem auto;
+}
+
+.Grid-row{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
+}
+
+.Card{
+    position: relative;
+    flex: 0 1 15rem;
+    background-color: #FDD1CE;
+    padding: 5rem;
+    transition: background-color .2s cubic-bezier(0.5, 0.3, 0.8, 0.06);
+    color: #000;
+}
+
+.Card-thumb{
+    position: relative;
+    width:15rem;
+    height: 10rem;
+    perspective-origin: 50%;
+    perspective: 600px; 
+    z-index: 1;
+}
+
+#Card-shadow, .Card-image{
+    position: absolute;
+    display:block;
+    width: 15rem;
+    height: 10rem;
+    transition: all .2s cubic-bezier(0.42, 0.0, 0.58, 1.0);
+}
+
+#Card-shadow{
+    opacity: 8;
+}
+
+.Card-shadow1{
+    opacity: .6;
+    background-color: #A81182;
+    transition: all .2s cubic-bezier(0.42, 0.0, 0.58, 1.0) .07s;
+}
+
+.Card-shadow2{
+    opacity: .7;
+    background-color: #BA2F8B;
+   transition: all .2s cubic-bezier(0.42, 0.0, 0.58, 1.0) .05s;
+}
+
+.Card-shadow3{
+    background-color: #CC4290;
+    transition: all .2s cubic-bezier(0.42, 0.0, 0.58, 1.0) .03s;
+}
+
+.Card-image{
+    position: relative;
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #FFF6F2;
+}
+
+.Card-image ::before{
+    position: absolute;
+    top:0;
+    right: 0;
+    bottom:0;
+    background-color: #3F51B5;
+    content: '';
+    opacity: 0;
+    transition: opacity .1s;
+}
+
+.Card-title, .Card-explore{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 5rem;
+    text-align: center;
+    transition: all .2s cubic-bezier(0.5, 0.3, 0.8, 0.06);
+}
+
+span{
+    padding: .5rem;
+    flex: 1 1 auto;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    color: #50514F;
+}
+
+.Card-explore{
+    opacity: 0;
+    transform: translate(0,-1rem);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color:#673AB7;
+}
+
+
+.Card:hover, .Card--active{
+    background-color: #FDD1CE;
+    cursor: pointer;
+}
+.Card:hover .Card-thumb,
+.Card--active .Card-thumb {
+  z-index: 3;
+}
+.Card:hover .Card-title,
+.Card--active .Card-title {
+  opacity: 0;
+}
+.Card:hover .Card-explore,
+.Card--active .Card-explore {
+  opacity: 1;
+  transform: translate(0, 1rem);
+  transition: all 0.2s cubic-bezier(0.42, 0, 0.58, 1) 0.1s;
+}
+.Card:hover .Card-image,
+.Card--active .Card-image {
+  transform: scale(1.05) translate(0, -1rem) rotateX(25deg);
+}
+.Card:hover .Card-image::before,
+.Card--active .Card-image::before {
+  opacity: 0.4;
+}
+.Card:hover .Card-shadow3,
+.Card--active .Card-shadow3 {
+  transform: scale(1.02) translate(0, -0.3rem) rotateX(15deg);
+}
+.Card:hover .Card-shadow2,
+.Card--active .Card-shadow2{
+  transform: scale(0.9) translate(0, 1rem) rotateX(15deg);
+}
+.Card:hover .Card-shadow1,
+.Card--active .Card-shadow1 {
+  transform: scale(0.82) translate(0, 2.4rem) rotateX(5deg);
+}
+.Card:hover .Card-button,
+.Card--active .Card-button {
+  opacity: 1;
+  color: #3F51B5;
+  transform: translate(-50%, 0);
+}
+.Card:hover .Card-button:hover,
+.Card--active .Card-button:hover {
+  color: #fff;
+  background-color: #3F51B5;
+}
+
+/* Gallery */
+.Gallery{
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #F5F5F5;
+    opacity: 0;
+    transform: scale(1.2);
+    transition: none;
+    padding: 18rem 0;
+}
+
+.Gallery-header{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: #eee;
+    padding-bottom: 5rem;
+}
+
+.Gallery-close{
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 3rem;
+    opacity: .5;
+    cursor: pointer;
+}
+
+.Gallery-close:hover{
+    opacity: .8;
+}
+
+.Gallery-images{
+    display: flex;
+    width: 50vh;
+    margin-top: 0;
+    justify-content: flex-start;
+    margin-bottom: 10vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+.gallery-content{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-right: 20vh;
+
+}
+
+.Gallery-image{
+    display: block;
+    width: 15rem;
+    height: 9.5rem;
+    transition: all .2s cubic-bezier(0.42, 0.0, 0.58, 1.0);
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.Gallery-image--primary{
+    /* width: 31rem;
+    height: 20rem; */
+    height: 40vh;
+    width: 70vh;
+    object-fit: none;
+    background-color: #673AB7;
+}
+
+.Gallery--active{
+    z-index: 100;
+    background: #FFF6F2;
+    transform: scale(1);
+    opacity: 1;
+    transition: all 0.5s cubic-bezier(0.7, 0.0, 0.78, 1.0) .1s;
+}
+
+Gallery-close{
+    display: block;
+}
+
+.Gallery-images{
+    opacity: 1;
+    transform: none;
+}
+
+.textproyect{
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    width: 60vh;
+    margin-right: 0;
+    justify-content: space-between;
+    text-align: center;
+}

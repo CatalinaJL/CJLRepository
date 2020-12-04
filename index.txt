@@ -1,0 +1,3 @@
+button class="Card-button">view more</button>
+
+<div class="Card-explore"><span>Explore 50 more</span></div>
