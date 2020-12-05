@@ -1,143 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
-    <!-- Fonts -->
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <!--Fonts from GoogleFonts-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Days+One&family=Quicksand:wght@400;500&display=swap"
         rel="stylesheet">
-        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
         crossorigin="anonymous">
+    <!--CSS File-->
+    <link rel="stylesheet" href="style.css">
     <title>Portafolio CJL</title>
 </head>
-
 <body>
-    <section class="welcome">
-        <div class="name">
-            <h1>CATALINA JARA LIRA</h1>
-            <h1>FRONT-END DEVELOPER</h1>  
+ <div class="container">
+  <div class="section" id="welcome">
+    <h5>Bievenidos, acá va la imagen morada</h5>
+    <p>Catalina Jara Lira | Front End Developer</p>
+  </div>
+  <div class="divider"></div>
+  <div class="section">
+      <div class="row">
+        <h1>Sobre Mí</h1>
+      </div>
+    <div class="row">
+        <div class="col s2"> 
+            <p>Hola! aca va mi descripción y mi foto </p>
         </div>
-    </section>
-    <div class="container-info">
+  </div>
+  <div class="divider"></div>
+  <div class="section">
+      <div class="row">
+        <h1>Proyectos!</h1>
+      </div>
+      <div class="row">
+          <div class="col s3">
 
-    </div>
-    <section class="aboutMe">
-        <div class="title">
-            <h1>Sobre Mí...</h1>
-        </div>
-   <div class="container"> 
-    <figure class="myphoto">
-        <img class="photo" src="./Assets/Images/CATARSIS CATA-58 (3).jpg" alt="Cata">
-    </figure>
-    <aside class="descriptionMe">
-        <p>Hola! 
-            Soy Catalina, y soy Front-End Developer con background en derecho. 
-            Estoy empezando un nuevo camino en el área de la tecnología, con ansías de 
-            seguir ampliando mis conocimientos y habilidades en 
-            programación. Creo que el trabajo en equipo y la comunicación 
-            son importantes en todos los desafios que he enfrentado y 
-            que enfrentare en esta nueva etapa.
-            Si quieres conocer más de mi, te invito a conocer mis trabajos. 
-            </p>
-    </aside>
-    
-   </div>
-    </section>
-
-    <section class="myProjects">
-        <div class="title">
-            <h1>Mis Proyectos</h1>
-        </div>
-     <div class="Grid">
-        <div class="Grid-row">
-            <a class="Card" onclick="openGallery()" id="card-1">
-                <div class="Card-thumb">
-                    <div class="Card-shadow1" id="Card-shadow"></div>
-                    <div class="Card-shadow2" id="Card-shadow"></div>
-                    <div class="Card-shadow3" id="Card-shadow"></div>
-                    <div class="Card-image" style="background-image: url(./Assets/Images/ComidaParaTodos-removebg-preview.png)"></div>
-                </div>
-                <!-- <div class="Card-title"><span>Comida Para Todos</span></div> -->
-                </a>
-                <a class="Card" onclick="openGallery()" id="card-2">
-                    <div class="Card-thumb">
-                        <div class="Card-shadow1" id="Card-shadow"></div>
-                        <div class="Card-shadow2" id="Card-shadow"></div>
-                        <div class="Card-shadow3" id="Card-shadow"></div>
-                        <div class="Card-image" style="background-image: url(./Assets/Images/LogoReia2.png)"></div>
-                    </div>
-                    </a>
-    
-        </div>
-     </div>
-    </section>
-        <section class="Gallery" id="gallery-1">
-            <div class="Gallery-header"><a class="Gallery-close" onclick="closeAll()">×</a></div>
-            <div class="gallery-content">
-                <div class="Gallery-images">
-                    <div class="Gallery-image Gallery-image--primary" style="background-image: url(./Assets/Images/image\ 1.png)"></div>
-                </div>
-                <div class="textproyect">
-                    <div class="descriptionProyect">
-                        <p>"Comida Para Todos" fue un proyecto empresa realizado por un equipo multidisciplinario de estudiantes de UX y 
-                            de Front-End de Laboratoria. 
-                            El proyecto consistio en el rediseño de la página web de la ONG "Comida Para Todos" la cual tiene como misión 
-                            reducir la inseguridad alimentaria de nuestro país. 
-                        </p>
-                    </div>
-                    <div class="skills">
-                        <h4>Tecnologías Utilizadas:</h4>
-                        <p> ReactJS, Bootstrap,Firebase Firestore.</p>
-                    </div>
-                    <div class="linksProyect">
-                        <h4>Links del proyecto: </h4>
-                        <br>
-                        <a href="https://github.com/adbarquitectura/SCL014-comida-para-todos">
-                            <img src="./Assets/Icons/iconfinder_github_social_media_logo_1221583.png" alt="">
-                        </a> 
-                        <a href="">
-                            <img src="./Assets/Icons/iconfinder_www_logo_social_media_1071012.png" alt="">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-        </section>
-        <!-- <section class="Gallery" id="gallery-2">
-            <div class="Gallery-header"><a class="Gallery-close" onclick="closeAll()">×</a></div>
-            <div class="Gallery-images">
-                <div class="Gallery-image Gallery-image--primary" style="background-image: url(https://robohash.org/1)"></div>
-            </div>
-            <div class="descriptionProyect">
-                <p>"Comida Para Todos" fue un proyecto empresa realizado por un equipo multidisciplinario de estudiantes de UX y 
-                    de Front-End de Laboratoria. 
-                    El proyecto consistio en el rediseño de la página web de la ONG "Comida Para Todos" la cual tiene como misión 
-                    reducir la inseguridad alimentaria de nuestro país. 
-                </p>
-            </div>
-            <div class="linksProyect">
-                <a href="https://github.com/adbarquitectura/SCL014-comida-para-todos">
-                    <img src="./Assets/Images/iconfinder_github_social_media_logo_1221583.png" alt="">
-                </a>
-                <a href="">
-                    <img src="./Assets/Images/iconfinder_www_logo_social_media_1071012.png" alt="">
-                </a>
-            </div>
-        </section> -->
-    </section>
-
-    <section class="contact">
-        <div class="title">
-            <h1>Contacto</h1>
-        </div>
-        
-        
-    </section>
-<script src="index.js"></script>
+            <p>Aca van los proyectos con la galeria que hice en el otro </p>
+          </div>
+      </div>
+  </div>
+  <div class="divider"></div>
+  <div class="section">
+    <h5>Contacto!</h5>
+    <p>Aca va mi Contacto </p>
+  </div>
+ </div>
+    <!--JS from Materialize-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <!--JS-->
+    <script src="./src/index.js"></script>
 </body>
-
 </html>
